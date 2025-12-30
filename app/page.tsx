@@ -158,26 +158,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Feedback Section */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Real Stories, <span className="text-[var(--cyan-glow)]">Real Relief</span>
+            Share Your <span className="text-[var(--cyan-glow)]">Experience</span>
           </h2>
-          <p className="text-[var(--text-secondary)] text-center mb-12 max-w-xl mx-auto">
-            Hear from people who found their way back.
+          <p className="text-[var(--text-secondary)] text-center mb-10 max-w-xl mx-auto">
+            We'd love to hear from you — testimonials, suggestions, or just say hi.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <TestimonialCard
-              quote="This helped me during my worst panic attack in years. The heartbeat brought me back."
-              author="Sarah M."
-            />
-            <TestimonialCard
-              quote="I keep it on my home screen. Just knowing it's there gives me peace of mind."
-              author="James K."
-            />
-          </div>
+          <form 
+            action="mailto:admin@pulse46.app" 
+            method="POST" 
+            encType="text/plain"
+            className="space-y-6"
+          >
+            <div>
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Your name (optional)"
+                className="w-full px-4 py-3 rounded-xl bg-[var(--bg-card)] border border-[rgba(0,240,255,0.1)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--cyan-glow)] transition-colors"
+              />
+            </div>
+            <div>
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Your email (optional)"
+                className="w-full px-4 py-3 rounded-xl bg-[var(--bg-card)] border border-[rgba(0,240,255,0.1)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--cyan-glow)] transition-colors"
+              />
+            </div>
+            <div>
+              <textarea 
+                name="message" 
+                rows={4}
+                placeholder="Share your experience, suggestion, or feedback..."
+                className="w-full px-4 py-3 rounded-xl bg-[var(--bg-card)] border border-[rgba(0,240,255,0.1)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--cyan-glow)] transition-colors resize-none"
+              />
+            </div>
+            <button 
+              type="submit"
+              className="btn-cyan w-full"
+            >
+              Send Feedback
+            </button>
+          </form>
         </div>
       </section>
 
@@ -279,8 +306,8 @@ function TestimonialCard({ quote, author }: { quote: string; author: string }) {
   return (
     <div className="feature-card">
       <QuoteIcon className="w-8 h-8 text-[var(--cyan-glow)] mb-4 opacity-50" />
-      <p className="text-lg leading-relaxed mb-4">{quote}</p>
-      <p className="text-[var(--cyan-glow)] font-semibold">— {author}</p>
+      <p className="text-lg leading-relaxed">{quote}</p>
+      {author && <p className="text-[var(--cyan-glow)] font-semibold mt-4">— {author}</p>}
     </div>
   );
 }

@@ -5,60 +5,56 @@ export default function Home() {
   return (
     <main className="gradient-bg min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-[var(--bg-deep)]/80 backdrop-blur-lg">
-        <div className="max-w-6xl mx-auto grid grid-cols-3 items-center">
-          {/* Left: Logo + Social */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1.5">
-              <HeartIcon className="w-8 h-8 text-[var(--cyan-glow)]" />
-              <span className="text-2xl font-bold tracking-tight">Pulse 46</span>
-            </div>
-            <div className="flex items-center gap-1.5 ml-2">
-              <a 
-                href="https://instagram.com/pulse46.app" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
-              >
-                <InstagramIcon className="w-3 h-3" />
-                <span className="hidden sm:inline">Instagram</span>
-              </a>
-              <a 
-                href="https://tiktok.com/@pulse46.app" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
-              >
-                <TikTokIcon className="w-3 h-3" />
-                <span className="hidden sm:inline">TikTok</span>
-              </a>
-            </div>
+      <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-3 bg-[var(--bg-deep)]/80 backdrop-blur-lg">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          {/* Left: Logo */}
+          <div className="flex items-center gap-1.5">
+            <HeartIcon className="w-7 h-7 sm:w-8 sm:h-8 text-[var(--cyan-glow)]" />
+            <span className="text-lg sm:text-2xl font-bold tracking-tight">Pulse 46</span>
           </div>
 
-          {/* Center: App Store */}
-          <div className="flex justify-center">
+          {/* Center: Social pills - hidden on mobile */}
+          <div className="hidden md:flex items-center gap-2">
+            <a 
+              href="https://instagram.com/pulse46.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
+            >
+              <InstagramIcon className="w-3 h-3" />
+              <span>Instagram</span>
+            </a>
+            <a 
+              href="https://tiktok.com/@pulse46.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
+            >
+              <TikTokIcon className="w-3 h-3" />
+              <span>TikTok</span>
+            </a>
+          </div>
+
+          {/* Right: App Store + Legal */}
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
+              Privacy
+            </Link>
+            <Link href="/terms" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
+              Terms
+            </Link>
             <a 
               href="https://apps.apple.com/app/pulse-46" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="app-store-btn !py-2 !px-4"
+              className="app-store-btn !py-1.5 !px-3 sm:!py-2 sm:!px-4"
             >
-              <AppleIcon className="w-5 h-5" />
+              <AppleIcon className="w-4 h-4 sm:w-5 sm:h-5" />
               <div className="text-left">
-                <div className="text-[10px] text-[var(--cyan-glow)] leading-tight">Download on the</div>
-                <div className="text-sm font-semibold leading-tight">App Store</div>
+                <div className="text-[8px] sm:text-[10px] text-[var(--cyan-glow)] leading-tight">Download on the</div>
+                <div className="text-xs sm:text-sm font-semibold leading-tight">App Store</div>
               </div>
             </a>
-          </div>
-
-          {/* Right: Legal */}
-          <div className="flex items-center justify-end gap-6">
-            <Link href="/privacy" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block">
-              Privacy
-            </Link>
-            <Link href="/terms" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block">
-              Terms
-            </Link>
           </div>
         </div>
       </nav>

@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: 'Pulse 46 Feedback <noreply@808freight.com>',
+      from: 'Pulse 46 <noreply@pulse46.app>',
       to: ['admin@pulse46.app'],
       subject: `Pulse 46 Feedback${name ? ` from ${name}` : ''}`,
       html: `

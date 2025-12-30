@@ -7,32 +7,54 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-3 bg-[var(--bg-deep)]/80 backdrop-blur-lg">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          {/* Left: Logo */}
-          <div className="flex items-center gap-1.5">
-            <HeartIcon className="w-7 h-7 sm:w-8 sm:h-8 text-[var(--cyan-glow)]" />
-            <span className="text-lg sm:text-2xl font-bold tracking-tight">Pulse 46</span>
-          </div>
-
-          {/* Center: Social pills - hidden on mobile */}
-          <div className="hidden md:flex items-center gap-2">
-            <a 
-              href="https://instagram.com/pulse46.app" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
-            >
-              <InstagramIcon className="w-3 h-3" />
-              <span>Instagram</span>
-            </a>
-            <a 
-              href="https://tiktok.com/@pulse46.app" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
-            >
-              <TikTokIcon className="w-3 h-3" />
-              <span>TikTok</span>
-            </a>
+          {/* Left: Logo + Social Icons */}
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
+              <HeartIcon className="w-7 h-7 sm:w-8 sm:h-8 text-[var(--cyan-glow)]" />
+              <span className="text-lg sm:text-2xl font-bold tracking-tight">Pulse 46</span>
+            </div>
+            {/* Mobile: Just icons */}
+            <div className="flex md:hidden items-center gap-2">
+              <a 
+                href="https://instagram.com/pulse46.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[var(--cyan-glow)] hover:opacity-80 transition-opacity"
+                aria-label="Instagram"
+              >
+                <InstagramIcon className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://tiktok.com/@pulse46.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[var(--cyan-glow)] hover:opacity-80 transition-opacity"
+                aria-label="TikTok"
+              >
+                <TikTokIcon className="w-4 h-4" />
+              </a>
+            </div>
+            {/* Desktop: Pills with text */}
+            <div className="hidden md:flex items-center gap-2">
+              <a 
+                href="https://instagram.com/pulse46.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
+              >
+                <InstagramIcon className="w-3 h-3" />
+                <span>Instagram</span>
+              </a>
+              <a 
+                href="https://tiktok.com/@pulse46.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 px-2 py-1 rounded-full border border-[var(--cyan-glow)] text-[var(--cyan-glow)] hover:bg-[var(--cyan-glow)] hover:text-[var(--bg-deep)] transition-all text-xs font-medium"
+              >
+                <TikTokIcon className="w-3 h-3" />
+                <span>TikTok</span>
+              </a>
+            </div>
           </div>
 
           {/* Right: App Store + Legal */}

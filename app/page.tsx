@@ -7,12 +7,20 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-3 bg-[var(--bg-deep)]/80 backdrop-blur-lg">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          {/* Left: Logo + Social Icons */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5">
-              <HeartIcon className="w-7 h-7 sm:w-8 sm:h-8 text-[var(--cyan-glow)]" />
-              <span className="text-lg sm:text-2xl font-bold tracking-tight">Pulse 46</span>
-            </div>
+          {/* Left: Logo */}
+          <div className="flex items-center gap-1.5">
+            <HeartIcon className="w-7 h-7 sm:w-8 sm:h-8 text-[var(--cyan-glow)]" />
+            <span className="text-lg sm:text-2xl font-bold tracking-tight">Pulse 46</span>
+          </div>
+
+          {/* Right: Social + App Store + Legal */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            <Link href="/privacy" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
+              Privacy
+            </Link>
+            <Link href="/terms" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
+              Terms
+            </Link>
             {/* Mobile: Just icons */}
             <div className="flex md:hidden items-center gap-2">
               <a 
@@ -55,16 +63,6 @@ export default function Home() {
                 <span>TikTok</span>
               </a>
             </div>
-          </div>
-
-          {/* Right: App Store + Legal */}
-          <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
-              Privacy
-            </Link>
-            <Link href="/terms" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
-              Terms
-            </Link>
             <a 
               href="https://apps.apple.com/app/pulse-46" 
               target="_blank" 

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description: "Find calm in the chaos. Pulse 46 uses synchronized heartbeat haptics and guided breathing to help you through panic attacks.",
   keywords: ["panic attack", "anxiety relief", "breathing app", "calm", "mental health", "iOS app"],
   authors: [{ name: "Pulse 46" }],
+  icons: {
+    icon: '/icon.svg',
+  },
   openGraph: {
     title: "Pulse 46 - Panic Attack Relief",
     description: "Find calm in the chaos. Synchronized heartbeat haptics and guided breathing.",

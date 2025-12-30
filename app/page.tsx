@@ -13,14 +13,8 @@ export default function Home() {
             <span className="text-lg sm:text-2xl font-bold tracking-tight">Pulse 46</span>
           </div>
 
-          {/* Right: Social + App Store + Legal */}
+          {/* Right: Social + App Store */}
           <div className="flex items-center gap-3 sm:gap-4">
-            <Link href="/privacy" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
-              Privacy
-            </Link>
-            <Link href="/terms" className="text-[var(--text-secondary)] hover:text-[var(--cyan-glow)] transition-colors hidden sm:block text-sm">
-              Terms
-            </Link>
             {/* Mobile: Just icons */}
             <div className="flex md:hidden items-center gap-2">
               <a 

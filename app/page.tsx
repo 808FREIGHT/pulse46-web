@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FeedbackForm from "./components/FeedbackForm";
 
 export default function Home() {
   return (
@@ -168,43 +169,7 @@ export default function Home() {
             We'd love to hear from you — testimonials, suggestions, or just say hi.
           </p>
 
-          <form 
-            action="mailto:admin@pulse46.app" 
-            method="POST" 
-            encType="text/plain"
-            className="space-y-6"
-          >
-            <div>
-              <input 
-                type="text" 
-                name="name" 
-                placeholder="Your name (optional)"
-                className="w-full px-4 py-3 rounded-xl bg-[var(--bg-card)] border border-[rgba(0,240,255,0.1)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--cyan-glow)] transition-colors"
-              />
-            </div>
-            <div>
-              <input 
-                type="email" 
-                name="email" 
-                placeholder="Your email (optional)"
-                className="w-full px-4 py-3 rounded-xl bg-[var(--bg-card)] border border-[rgba(0,240,255,0.1)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--cyan-glow)] transition-colors"
-              />
-            </div>
-            <div>
-              <textarea 
-                name="message" 
-                rows={4}
-                placeholder="Share your experience, suggestion, or feedback..."
-                className="w-full px-4 py-3 rounded-xl bg-[var(--bg-card)] border border-[rgba(0,240,255,0.1)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--cyan-glow)] transition-colors resize-none"
-              />
-            </div>
-            <button 
-              type="submit"
-              className="btn-cyan w-full"
-            >
-              Send Feedback
-            </button>
-          </form>
+          <FeedbackForm />
         </div>
       </section>
 
